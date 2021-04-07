@@ -4,19 +4,19 @@ import React, {
   useRef,
   createContext,
   useContext,
-} from "react"
+} from "react";
 
-const WindowSizeCtx = createContext()
+const WindowSizeCtx = createContext();
 
-export const useWindowSize = () => useContext(WindowSizeCtx)
+export const useWindowSize = () => useContext(WindowSizeCtx);
 
 const WindowSizeProvider = ({ children }) => {
-  const resizeInProgress = useRef(false)
+  const resizeInProgress = useRef(false);
 
   const [dimensions, setDimensions] = useState({
     width: typeof window !== "undefined" ? window.innerWidth : null,
     height: typeof window !== "undefined" ? window.innerHeight : null,
-  })
+  });
 
   useEffect(() => {
     function throttledUpdateWindowSize() {
@@ -24,27 +24,27 @@ const WindowSizeProvider = ({ children }) => {
         setDimensions({
           width: typeof window !== "undefined" ? window.innerWidth : null,
           height: typeof window !== "undefined" ? window.innerHeight : null,
-        })
-        resizeInProgress.current = false
-      }, 500)
+        });
+        resizeInProgress.current = false;
+      }, 500);
     }
     function handleResize() {
       if (resizeInProgress.current === true) {
-        return
+        return;
       }
-      resizeInProgress.current = true
-      throttledUpdateWindowSize()
+      resizeInProgress.current = true;
+      throttledUpdateWindowSize();
     }
 
-    window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
-  }, [])
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <WindowSizeCtx.Provider value={dimensions}>
       {children}
     </WindowSizeCtx.Provider>
-  )
-}
+  );
+};
 
-export default WindowSizeProvider
+export default WindowSizeProvider;
