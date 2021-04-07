@@ -1,20 +1,20 @@
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
-})
+});
 
-const queries = require("./src/algoliaQueries")
+const queries = require("./src/algoliaQueries");
 
 const {
   NODE_ENV,
   URL: NETLIFY_SITE_URL = "https://www.escmattresscenter.com",
   DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
   CONTEXT: NETLIFY_ENV = NODE_ENV,
-} = process.env
-const isNetlifyProduction = NETLIFY_ENV === "production"
-const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
-console.log(NETLIFY_ENV)
+} = process.env;
+const isNetlifyProduction = NETLIFY_ENV === "production";
+const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
+console.log(NETLIFY_ENV);
+
 const cfg = {
-  /* Your site config here */
   plugins: [
     `gatsby-plugin-goober`,
     `gatsby-plugin-webpack-bundle-analyser-v2`,
@@ -130,7 +130,7 @@ const cfg = {
       },
     },
   ],
-}
+};
 
 if (process.env.NODE_ENV === "production") {
   const googleAnalyticsCfg = {
@@ -138,11 +138,11 @@ if (process.env.NODE_ENV === "production") {
     options: {
       trackingId: process.env.GOOGLE_ANALYTICS,
     },
-  }
-  const preact = `gatsby-plugin-preact`
+  };
+  const preact = `gatsby-plugin-preact`;
 
-  cfg.plugins.push(preact)
-  cfg.plugins.push(googleAnalyticsCfg)
+  cfg.plugins.push(preact);
+  cfg.plugins.push(googleAnalyticsCfg);
 }
 
-module.exports = cfg
+module.exports = cfg;
