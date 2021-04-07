@@ -15,6 +15,10 @@ const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
 console.log(NETLIFY_ENV);
 
 const cfg = {
+  siteMetadata: {
+    title: "E.S.C Mattress Center",
+    siteUrl,
+  },
   plugins: [
     `gatsby-plugin-goober`,
     `gatsby-plugin-webpack-bundle-analyser-v2`,
