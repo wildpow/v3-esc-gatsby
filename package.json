@@ -4,7 +4,7 @@
   "description": "A simplified bare-bones starter for Gatsby",
   "version": "0.1.0",
   "license": "0BSD",
-  "scripts": { 
+  "scripts": {
     "postinstall": "husky install",
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable",
@@ -17,6 +17,10 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@fontsource/roboto": "^4.2.2",
+    "@fontsource/roboto-slab": "^4.2.2",
+    "@reach/visually-hidden": "^0.14.0",
+    "algoliasearch": "^4.8.6",
     "gatsby": "^3.1.2",
     "gatsby-plugin-algolia": "^0.18.0",
     "gatsby-plugin-canonical-urls": "^3.2.0",
@@ -41,13 +45,21 @@
     "goober": "^2.0.36",
     "preact": "^10.5.13",
     "preact-render-to-string": "^5.1.18",
+    "query-string": "^7.0.0",
     "react": "^17.0.1",
+    "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0"
+    "react-focus-lock": "^2.5.0",
+    "react-headroom": "^3.1.1",
+    "react-helmet": "^6.1.0",
+    "react-instantsearch-dom": "^6.10.3",
+    "reactjs-popup": "^2.0.4",
+    "shopify-buy": "^2.11.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.1.1",
     "@commitlint/config-conventional": "^12.1.1",
+    "@tailwindcss/typography": "^0.4.0",
     "eslint": "^7.23.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.1.0",
@@ -59,7 +71,9 @@
     "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.21",
     "husky": "^6.0.0",
     "pinst": "^2.1.6",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "tailwindcss": "^2.1.1",
+    "twin.macro": "^2.3.2"
   },
   "repository": {
     "type": "git",
@@ -67,5 +81,10 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "babelMacros": {
+    "twin": {
+      "preset": "goober"
+    }
   }
 }
