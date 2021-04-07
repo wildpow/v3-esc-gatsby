@@ -39,5 +39,17 @@
         "trailingComma": "es5"
       }
     ]
+  },
+  "settings": {
+    "import/core-modules": [
+      "gatsby",
+      "prop-types",
+      "dotenv",
+      "@reach/router",
+      "slash",
+      "tailwindcss/colors",
+      "@tailwindcss/typography"
+     
+    ]
   }
 }
