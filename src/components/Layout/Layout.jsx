@@ -10,8 +10,8 @@
 // import { Footer, MobileMenu, Cart, Header } from "./LayoutComponents";
 // import CartIndicator from "./Cart/CartIndicator";
 // import StoreContext from "../../context/StoreContext";
-import React from "react"
-
+import React from "react";
+import StoreProvider from "../../context/StoreContext";
 // const MainRoot = styled.div`
 //   max-width: 1440px;
 //   margin-left: auto;
@@ -20,7 +20,7 @@ import React from "react"
 //     cartStatus === "open" || menuStatus === "open" ? "15px" : "0px"}; */
 // `;
 function Layout({ children }) {
-  return <>{children}</>
+  return <StoreProvider>{children}</StoreProvider>;
 }
 
-export default Layout
+export default Layout;
