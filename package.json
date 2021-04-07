@@ -4,7 +4,10 @@
   "description": "A simplified bare-bones starter for Gatsby",
   "version": "0.1.0",
   "license": "0BSD",
-  "scripts": {
+  "scripts": { 
+    "postinstall": "husky install",
+    "prepublishOnly": "pinst --disable",
+    "postpublish": "pinst --enable",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
@@ -55,6 +58,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.21",
     "husky": "^6.0.0",
+    "pinst": "^2.1.6",
     "prettier": "^2.2.1"
   },
   "repository": {
@@ -63,11 +67,5 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "pretty-quick --staged"
-    }
   }
 }
