@@ -1,6 +1,6 @@
-import React from "react"
-import Layout from "../components/Layout"
+import React from "react";
+import Layout from "../components/Layout";
 
-const Policies = ({ data }) => <Layout>policies</Layout>
+const Policies = ({ data }) => <Layout>policies</Layout>;
 
-export default Policies
+export default Policies;

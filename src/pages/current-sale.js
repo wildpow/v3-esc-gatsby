@@ -1,8 +1,6 @@
-import React from "react"
-import Layout from "../components/Layout"
+import React from "react";
+import Layout from "../components/Layout";
 
-const Sale = ({ data }) => {
-  return <Layout>sale</Layout>
-}
+const Sale = ({ data }) => <Layout>sale</Layout>;
 
-export default Sale
+export default Sale;

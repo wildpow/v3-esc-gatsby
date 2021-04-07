@@ -1,8 +1,6 @@
-import React from "react"
-import Layout from "../components/Layout"
+import React from "react";
+import Layout from "../components/Layout";
 
-const Brands = ({ data }) => {
-  return <Layout>Brands</Layout>
-}
+const Brands = ({ data }) => <Layout>Brands</Layout>;
 
-export default Brands
+export default Brands;

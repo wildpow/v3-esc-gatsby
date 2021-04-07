@@ -1,8 +1,6 @@
-import React from "react"
-import Layout from "../../../components/Layout"
+import React from "react";
+import Layout from "../../../components/Layout";
 
-const Beautyrest = ({ data }) => {
-  return <Layout>beautyrest</Layout>
-}
+const Beautyrest = ({ data }) => <Layout>beautyrest</Layout>;
 
-export default Beautyrest
+export default Beautyrest;

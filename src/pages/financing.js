@@ -1,9 +1,7 @@
-import React from "react"
+import React from "react";
 
-import Layout from "../components/Layout"
+import Layout from "../components/Layout";
 
-const Financing = ({ data }) => {
-  return <Layout>Financing</Layout>
-}
+const Financing = ({ data }) => <Layout>Financing</Layout>;
 
-export default Financing
+export default Financing;

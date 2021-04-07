@@ -1,8 +1,6 @@
-import React from "react"
-import Layout from "../components/Layout"
+import React from "react";
+import Layout from "../components/Layout";
 
-const SiteMap = ({ data }) => {
-  return <Layout>sitemap</Layout>
-}
+const SiteMap = ({ data }) => <Layout>sitemap</Layout>;
 
-export default SiteMap
+export default SiteMap;
