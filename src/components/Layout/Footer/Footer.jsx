@@ -22,13 +22,22 @@ const FooterRoot = styled(`footer`)`
   @media print {
     display: none;
   }
+  a,
+  svg {
+    color: ${theme`colors.blueGray[100]`};
+  }
+  h3,
+  h4 {
+    color: ${theme`colors.blueGray[400]`};
+  }
+  color: ${theme`colors.blueGray[100]`};
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding-right: ${theme`spacing.5`};
   padding-left: ${theme`spacing.5`};
   padding-top: ${theme`spacing.10`};
-  color: ${theme`colors.white`};
   background-color: ${theme`colors.lightBlue[900]`};
   margin: 0 auto;
   .topWrapper {
@@ -53,7 +62,7 @@ const FooterRoot = styled(`footer`)`
     margin-top: 20px;
     max-width: 1224px;
     font-family: ${theme`fontFamily.sans`};
-    border-top: 2px solid ${theme`colors.gray.100`}10;
+    border-top: 2px solid ${theme`colors.blueGray.100`}10;
     display: flex;
     justify-content: center;
     padding: ${theme`spacing.4`} 0;
@@ -65,7 +74,7 @@ const FooterRoot = styled(`footer`)`
       margin: 0;
       text-align: center;
       font-weight: 400;
-      color: ${theme`colors.gray.100`};
+      color: ${theme`colors.blueGray.100`};
       padding-bottom: ${theme`spacing.2`};
     }
     span {
@@ -120,7 +129,7 @@ const FooterRoot = styled(`footer`)`
           content: "";
           height: 0.25em;
           width: 0.25em;
-          background: white;
+          background: ${theme`colors.blueGray[400]`};
           display: block;
           position: absolute;
           transform: rotate(45deg);
@@ -129,11 +138,11 @@ const FooterRoot = styled(`footer`)`
         }
         &:hover {
           a {
-            border-bottom-color: ${theme`colors.gray.400`};
+            border-bottom-color: ${theme`colors.blueGray[400]`};
             color: white;
           }
           span {
-            color: ${theme`colors.gray.900`};
+            color: ${theme`colors.blueGray[100]`};
           }
         }
         a {
@@ -144,7 +153,7 @@ const FooterRoot = styled(`footer`)`
             outline: 0;
             transition: box-shadow 0.15s ease-in-out;
           }
-          color: ${theme`colors.gray.400`};
+          /* color: ${theme`colors.blueGray[400]`}; */
           text-decoration: none;
           font-weight: 300;
         }
@@ -152,7 +161,7 @@ const FooterRoot = styled(`footer`)`
           transition: all 0.2s ease;
           padding-left: ${theme`spacing.4`};
           font-weight: 300;
-          color: ${theme`colors.gray.600`};
+          color: ${theme`colors.blueGray[400]`};
         }
       }
     }
@@ -166,7 +175,6 @@ const FooterRoot = styled(`footer`)`
       svg {
         width: 35px;
         height: 35px;
-        color: white;
       }
       &:focus {
         box-shadow: 0 0 0 1px ${theme`colors.blue.300`} inset;
@@ -180,7 +188,7 @@ const FooterRoot = styled(`footer`)`
   }
   .bottomWrapper {
     flex-direction: column;
-    border-top: 2px solid ${theme`colors.gray.100`}10;
+    border-top: 2px solid ${theme`colors.blueGray.100`}10;
     display: flex;
     justify-content: center;
     padding-top: ${theme`spacing.4`};
@@ -204,23 +212,18 @@ const FooterRoot = styled(`footer`)`
       text-align: center;
       padding-top: 10px;
       font-weight: 300;
-      color: ${theme`colors.gray.300`};
+      color: ${theme`colors.blueGray.200`};
     }
   }
   .hours {
     font-family: ${theme`fontFamily.sans`};
     justify-self: flex-end;
     h6 {
-      color: ${theme`colors.gray.100`};
+      /* color: ${theme`colors.gray.100`}; */
       font-weight: 300;
       display: flex;
       margin: 0;
       font-size: ${theme`fontSize.base`};
-    }
-    span {
-      color: ${theme`colors.blue.100`};
-      font-weight: 400;
-      padding-right: ${theme`spacing.4`};
     }
   }
   .hours__inner {
