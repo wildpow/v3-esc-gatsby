@@ -19,12 +19,19 @@ import useReaders from "./readersChoice.query";
 // import Bird from "./Bird";
 
 const FooterRoot = styled(`footer`)`
+  font-family: ${theme`fontFamily.sans`};
   @media print {
     display: none;
   }
   a,
   svg {
     color: ${theme`colors.blueGray[100]`};
+    transition: all 0.2s ease-in;
+    &:focus {
+      box-shadow: 0 0 0 1px ${theme`colors.blue.300`} inset;
+      outline: 0;
+      transition: box-shadow 0.15s ease-in-out;
+    }
   }
   h3,
   h4 {
@@ -51,7 +58,6 @@ const FooterRoot = styled(`footer`)`
       width: 310px;
       h3 {
         font-weight: 500;
-        font-family: ${theme`fontFamily.sans`};
         text-transform: uppercase;
       }
     }
@@ -61,7 +67,6 @@ const FooterRoot = styled(`footer`)`
     margin: 0 auto;
     margin-top: 20px;
     max-width: 1224px;
-    font-family: ${theme`fontFamily.sans`};
     border-top: 2px solid ${theme`colors.blueGray.100`}10;
     display: flex;
     justify-content: center;
@@ -93,7 +98,6 @@ const FooterRoot = styled(`footer`)`
     a {
       padding: 0 10px;
       color: ${theme`colors.red.200`};
-      transition: all 0.2s ease-in;
       &:hover {
         color: ${theme`colors.lightBlue.100`};
       }
@@ -123,8 +127,6 @@ const FooterRoot = styled(`footer`)`
         padding-left: 1.3em;
         position: relative;
         padding-bottom: ${theme`spacing.4`};
-        font-family: ${theme`fontFamily.sans`};
-
         &:after {
           content: "";
           height: 0.25em;
@@ -147,13 +149,6 @@ const FooterRoot = styled(`footer`)`
         }
         a {
           border-bottom: 1px solid transparent;
-          transition: all 0.2s ease;
-          &:focus {
-            box-shadow: 0 0 0 1px ${theme`colors.blue.300`} inset;
-            outline: 0;
-            transition: box-shadow 0.15s ease-in-out;
-          }
-          /* color: ${theme`colors.blueGray[400]`}; */
           text-decoration: none;
           font-weight: 300;
         }
@@ -171,15 +166,9 @@ const FooterRoot = styled(`footer`)`
     display: flex;
     a {
       padding-right: ${theme`spacing.8`};
-      transition: all 0.2s ease;
       svg {
         width: 35px;
         height: 35px;
-      }
-      &:focus {
-        box-shadow: 0 0 0 1px ${theme`colors.blue.300`} inset;
-        outline: 0;
-        transition: box-shadow 0.15s ease-in-out;
       }
       &:hover {
         transform: scale(1.2);
@@ -193,7 +182,6 @@ const FooterRoot = styled(`footer`)`
     justify-content: center;
     padding-top: ${theme`spacing.4`};
     padding-bottom: ${theme`spacing.2`};
-    font-family: ${theme`fontFamily.sans`};
     max-width: 1224px;
     margin: 0 auto;
     aside {
@@ -202,7 +190,6 @@ const FooterRoot = styled(`footer`)`
       a {
         padding: 0 10px;
         color: ${theme`colors.red.200`};
-        transition: all 0.2s ease-in;
         &:hover {
           color: ${theme`colors.lightBlue.100`};
         }
@@ -216,7 +203,6 @@ const FooterRoot = styled(`footer`)`
     }
   }
   .hours {
-    font-family: ${theme`fontFamily.sans`};
     justify-self: flex-end;
     h6 {
       /* color: ${theme`colors.gray.100`}; */
@@ -262,12 +248,6 @@ const FooterRoot = styled(`footer`)`
     }
   }
   .link {
-    &:focus {
-      box-shadow: 0 0 0 3px ${theme`colors.blue.300`};
-      outline: 0;
-      transition: box-shadow 0.15s ease-in-out;
-    }
-    transition: all 0.25s ease-in;
     &:hover {
       transform: scale3d(1.05, 1.05, 1);
     }
