@@ -48,8 +48,8 @@
       "@reach/router",
       "slash",
       "tailwindcss/colors",
-      "@tailwindcss/typography"
-     
+      "@tailwindcss/typography",
+     "twin.macro"
     ]
   }
 }
