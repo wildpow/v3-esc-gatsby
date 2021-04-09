@@ -8,6 +8,7 @@ import Headroom from "react-headroom";
 // import MenuOverLay from "../shared/MenuOverLay";
 // import { StructuredDataMain, PageContent, GlobalStyle } from "./Extra";
 import React from "react";
+import { GlobalStyles } from "twin.macro";
 import { Footer, MobileMenu, Cart, Header } from "./LayoutComponents";
 // import CartIndicator from "./Cart/CartIndicator";
 // import StoreContext from "../../context/StoreContext";
@@ -19,14 +20,18 @@ import StoreProvider from "../../context/StoreContext";
 //   /* padding-right: ${({ cartStatus, menuStatus }) =>
 //     cartStatus === "open" || menuStatus === "open" ? "15px" : "0px"}; */
 // `;
-function Layout({ children }) {
+
+function Layout({ children, ...rest }) {
   return (
     <StoreProvider>
-      <Headroom>
-        <Header />
-      </Headroom>
-      {children}
-      <Footer />
+      <GlobalStyles />
+      <div {...rest}>
+        <Headroom>
+          <Header />
+        </Headroom>
+        {children}
+        <Footer />
+      </div>
     </StoreProvider>
   );
 }

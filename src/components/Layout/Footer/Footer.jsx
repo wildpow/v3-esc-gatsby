@@ -1,15 +1,8 @@
 import React from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
-import { styled, theme } from "twin.macro";
+import tw, { styled, theme } from "twin.macro";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
-// import {
-//   breakpoints,
-//   colors,
-//   spacing,
-//   fontSize,
-//   fonts,
-// } from "../../../utils/styles";
 import Yelp from "../../../assets/yelp-brands.svg";
 import Insta from "../../../assets/instagram-brands.svg";
 import Twitter from "../../../assets/twitter-brands.svg";
@@ -36,6 +29,7 @@ const FooterRoot = styled(`footer`)`
   h3,
   h4 {
     color: ${theme`colors.blueGray[400]`};
+    ${tw`text-lg`};
   }
   color: ${theme`colors.blueGray[100]`};
 
@@ -44,7 +38,7 @@ const FooterRoot = styled(`footer`)`
   justify-content: space-between;
   padding-right: ${theme`spacing.5`};
   padding-left: ${theme`spacing.5`};
-  padding-top: ${theme`spacing.10`};
+  padding-top: ${theme`spacing.4`};
   background-color: ${theme`colors.lightBlue[900]`};
   margin: 0 auto;
   .topWrapper {
@@ -56,8 +50,10 @@ const FooterRoot = styled(`footer`)`
     justify-content: space-evenly;
     section {
       width: 310px;
+      padding-bottom: ${theme`spacing.4`};
       h3 {
         font-weight: 500;
+        padding-bottom: ${theme`spacing.2`};
         text-transform: uppercase;
       }
     }
@@ -65,7 +61,7 @@ const FooterRoot = styled(`footer`)`
 
   .middleWrapper {
     margin: 0 auto;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     max-width: 1224px;
     border-top: 2px solid ${theme`colors.blueGray.100`}10;
     display: flex;
@@ -73,13 +69,13 @@ const FooterRoot = styled(`footer`)`
     padding: ${theme`spacing.4`} 0;
     flex-direction: column;
     font-weight: 300;
-    font-size: ${theme`fontSize.sm`};
+    font-size: ${tw`text-sm`};
     h4 {
-      font-size: ${theme`fontSize.base`};
+      font-size: ${tw`text-base`};
       margin: 0;
       text-align: center;
       font-weight: 400;
-      color: ${theme`colors.blueGray.100`};
+      color: ${theme`colors.blueGray.400`};
       padding-bottom: ${theme`spacing.2`};
     }
     span {
@@ -94,9 +90,10 @@ const FooterRoot = styled(`footer`)`
     padding-top: ${theme`spacing.2`};
     display: flex;
     justify-content: center;
-    font-size: ${theme`fontSize.base`};
+    font-size: ${tw`text-base`};
     a {
       padding: 0 10px;
+      text-decoration: underline;
       color: ${theme`colors.red.200`};
       &:hover {
         color: ${theme`colors.lightBlue.100`};
@@ -119,6 +116,7 @@ const FooterRoot = styled(`footer`)`
   }
   .navlinks {
     display: flex;
+    justify-content: space-between;
     ul {
       list-style: none;
       margin-top: 0;
@@ -126,7 +124,7 @@ const FooterRoot = styled(`footer`)`
         margin: 0;
         padding-left: 1.3em;
         position: relative;
-        padding-bottom: ${theme`spacing.4`};
+        padding-bottom: ${theme`spacing.2`};
         &:after {
           content: "";
           height: 0.25em;
@@ -180,14 +178,14 @@ const FooterRoot = styled(`footer`)`
     border-top: 2px solid ${theme`colors.blueGray.100`}10;
     display: flex;
     justify-content: center;
-    padding-top: ${theme`spacing.4`};
-    padding-bottom: ${theme`spacing.2`};
+    padding: ${theme`spacing.4`} 0;
     max-width: 1224px;
     margin: 0 auto;
     aside {
       display: flex;
       justify-content: center;
       a {
+        text-decoration: underline;
         padding: 0 10px;
         color: ${theme`colors.red.200`};
         &:hover {
@@ -199,17 +197,21 @@ const FooterRoot = styled(`footer`)`
       text-align: center;
       padding-top: 10px;
       font-weight: 300;
-      color: ${theme`colors.blueGray.200`};
+      color: ${theme`colors.blueGray.400`};
+      ${tw`text-xs`};
     }
   }
   .hours {
+    h3 {
+      padding-top: ${theme`spacing.4`};
+    }
     justify-self: flex-end;
     h6 {
       /* color: ${theme`colors.gray.100`}; */
       font-weight: 300;
       display: flex;
       margin: 0;
-      font-size: ${theme`fontSize.base`};
+      font-size: ${tw`text-base`};
     }
   }
   .hours__inner {
@@ -220,14 +222,14 @@ const FooterRoot = styled(`footer`)`
     h6 {
       margin: 0;
       padding-bottom: ${theme`spacing.2`};
-      font-size: ${theme`fontSize.base`};
+      font-size: ${tw`text-base`};
     }
   }
   .hours__time {
     h6 {
-      margin: 0;
+      /* margin: 0; */
       padding-bottom: ${theme`spacing.2`};
-      font-size: ${theme`fontSize.base`};
+      font-size: ${tw`text-base`};
     }
     display: flex;
     flex-direction: column;
