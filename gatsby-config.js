@@ -20,9 +20,8 @@ const cfg = {
     siteUrl,
   },
   plugins: [
-    `gatsby-plugin-goober`,
+    `gatsby-plugin-emotion`,
     `gatsby-plugin-webpack-bundle-analyser-v2`,
-    `gatsby-plugin-goober`,
     `gatsby-plugin-remove-serviceworker`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
